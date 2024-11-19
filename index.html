@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FairPlay Links</title>
+    <script type="text/javascript">
+        // Redirigir al deep link de la app
+        window.onload = function() {
+    // Obtener el parámetro 'status' de la URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var status = urlParams.get('status'); // Puede ser 'success' o 'failed'
+
+    if (status === 'success') {
+        // Redirigir al deep link de éxito
+        window.location.href = "fairPlay://payment-success";
+    } else if (status === 'failed') {
+        // Redirigir al deep link de cancelación
+        window.location.href = "fairPlay://payment-failed";
+    }
+
+    // En caso de que la app no esté instalada, redirigir a la página de descarga
+    setTimeout(function() {
+        //window.location.href = "https://play.google.com/store/apps/details?id=com.tuapp";
+    }, 2000);  // Espera 2 segundos antes de redirigir al store
+};
+    </script>
 </head>
 <body>
-    <h1>FairPlay</h1>
-    <p>Pago exitoso</p>
-    <p>Serás redirigido a la app de FairPlay</p>
+    <h1>Bienvenido a FairPlay Links</h1>
+    <p>Serás redirigido a tu app en breve...</p>
 </body>
 </html>
