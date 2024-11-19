@@ -20,6 +20,7 @@
       } else {
         // Si el pago no fue exitoso, puedes mostrar un mensaje o hacer otra cosa
         alert('El pago no fue exitoso.');
+        window.location.href = `fairPlay://payment-failed?session_id=${sessionId}`;
       }
     };
   </script>
