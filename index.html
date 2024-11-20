@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FairPlay Links - Pago Exitoso</title>
+  <title>FairPlay Links - Proceso Completado</title>
   <script>
     // Capturar los parámetros de la URL
     window.onload = function() {
@@ -13,6 +13,7 @@
 
       if (status === 'success') {
         // Aquí puedes usar sessionId para hacer algo si es necesario
+        alert('El pago fue exitoso.');
         console.log("Pago Exitoso. Session ID: ", sessionId);
 
         // Redirigir a la app móvil con el esquema personalizado
@@ -26,7 +27,7 @@
   </script>
 </head>
 <body>
-  <h1>¡Pago Exitoso!</h1>
-  <p>Redirigiendo a tu aplicación...</p>
+  <h1>Proceso Completado</h1>
+  <p>Regresa a tu App FairPlay</p>
 </body>
 </html>
