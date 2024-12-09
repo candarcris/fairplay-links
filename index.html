@@ -45,14 +45,12 @@
 
       if (status === 'success') {
         // Aquí puedes usar sessionId para hacer algo si es necesario
-        alert('El pago fue exitoso.');
-        console.log("Pago Exitoso. Session ID: ", sessionId);
-
+        alert('Payment Success');
         // Redirigir a la app móvil con el esquema personalizado
         window.location.href = `fairPlay://payment-success?session_id=${sessionId}`;
       } else {
         // Si el pago no fue exitoso, puedes mostrar un mensaje o hacer otra cosa
-        alert('El pago no fue exitoso.');
+        alert('Payment failed');
         window.location.href = `fairPlay://payment-failed?session_id=${sessionId}`;
       }
     };
@@ -60,7 +58,7 @@
 </head>
 <body>
   <img src="LogoFairplayPortada.png" alt="Logo">
-  <h1>Proceso Completado</h1>
-  <p>Regresa a tu App FairPlay</p>
+  <h1>Process Completed</h1>
+  <p>Return to FairPlay App</p>
 </body>
 </html>
